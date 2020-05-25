@@ -3,7 +3,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { makeStyles } from "@material-ui/core/styles"
-import "./layout.css"
 
 import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
@@ -12,13 +11,13 @@ import TextField from "@material-ui/core/TextField"
 import WhatsAppIcon from "@material-ui/icons/WhatsApp"
 import MailOutlineIcon from "@material-ui/icons/MailOutline"
 import PhoneOutlinedIcon from "@material-ui/icons/PhoneOutlined"
-import CreateOutlinedIcon from '@material-ui/icons/CreateOutlined';
+import CreateOutlinedIcon from "@material-ui/icons/CreateOutlined"
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined"
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined"
 import PersonOutlineOutlinedIcon from "@material-ui/icons/PersonOutlineOutlined"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Layout from "../components/Layout"
 
 const useStyles = makeStyles(theme => ({
   margin: {
@@ -82,10 +81,7 @@ const IndexPage = () => {
             <CreateOutlinedIcon />
           </Grid>
           <Grid item>
-            <TextField
-              id="message"
-              label="Mensagem"
-            />
+            <TextField id="message" label="Mensagem" />
           </Grid>
         </Grid>
       </div>
@@ -97,7 +93,6 @@ const IndexPage = () => {
       >
         Enviar
       </Button>
-
     </Layout>
   )
 }
