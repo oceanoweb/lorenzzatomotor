@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Lorenzzato Motor`,
     description: `Revendedora de automóveis`,
+    email: `lorenzzatomotor@hotmail.com`,
+    mobilePhone: `(11) 95202-5501`,
+    comPhone: `(11) 4109-9899`,
+    city: `S.B.Campo - SP`,
     author: `@marquinhusgonc`,
   },
   plugins: [
