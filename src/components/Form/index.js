@@ -14,42 +14,55 @@ import * as S from "./styled"
 const Form = () => {
   return (
     <S.FormWrapped>
-      <Grid container spacing={1} alignItems="flex-end">
-        <Grid item>
-          <PersonOutlineOutlinedIcon />
+      <S.Form action={process.env.GATSBY_FORM_URL} method="POST">
+        <Grid container spacing={1} alignItems="flex-end">
+          <Grid item>
+            <PersonOutlineOutlinedIcon />
+          </Grid>
+          <Grid item>
+            <TextField
+              type="text"
+              id="full-name"
+              name="full-name"
+              label="Nome completo"
+            />
+          </Grid>
         </Grid>
-        <Grid item>
-          <TextField id="full-name" label="Nome completo" />
-        </Grid>
-      </Grid>
 
-      <Grid container spacing={1} alignItems="flex-end">
-        <Grid item>
-          <MailOutlineIcon />
+        <Grid container spacing={1} alignItems="flex-end">
+          <Grid item>
+            <MailOutlineIcon />
+          </Grid>
+          <Grid item>
+            <TextField type="email" id="email" name="email" label="E-mail" />
+          </Grid>
         </Grid>
-        <Grid item>
-          <TextField id="email" label="E-mail" />
-        </Grid>
-      </Grid>
 
-      <Grid container spacing={1} alignItems="flex-end">
-        <Grid item>
-          <CreateOutlinedIcon />
+        <Grid container spacing={1} alignItems="flex-end">
+          <Grid item>
+            <CreateOutlinedIcon />
+          </Grid>
+          <Grid item>
+            <TextField
+              type="text"
+              id="message"
+              name="message"
+              label="Mensagem"
+            />
+          </Grid>
         </Grid>
-        <Grid item>
-          <TextField id="message" label="Mensagem" />
-        </Grid>
-      </Grid>
 
-      <Grid container spacing={1} alignItems="flex-end" justify="center">
-        <Button
-          variant="outlined"
-          size="large"
-          endIcon={<ArrowForwardOutlinedIcon />}
-        >
-          Enviar
-        </Button>
-      </Grid>
+        <Grid container spacing={1} alignItems="flex-end" justify="center">
+          <Button
+            type="submit"
+            variant="outlined"
+            size="large"
+            endIcon={<ArrowForwardOutlinedIcon />}
+          >
+            Enviar
+          </Button>
+        </Grid>
+      </S.Form>
     </S.FormWrapped>
   )
 }
