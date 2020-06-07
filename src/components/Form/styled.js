@@ -17,6 +17,6 @@ export const FormWrapped = styled.section`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 300px;
   justify-content: space-between;
 `
