@@ -18,6 +18,7 @@ const IndexPage = () => {
           mobilePhone
           comPhone
           city
+          facebook
         }
       }
     }
@@ -25,7 +26,15 @@ const IndexPage = () => {
 
   const {
     site: {
-      siteMetadata: { title, description, email, mobilePhone, comPhone, city },
+      siteMetadata: {
+        title,
+        description,
+        email,
+        mobilePhone,
+        comPhone,
+        city,
+        facebook,
+      },
     },
   } = data
 
@@ -39,6 +48,7 @@ const IndexPage = () => {
         mobilePhone={mobilePhone}
         comPhone={comPhone}
         city={city}
+        facebook={facebook}
       />
       <Form />
     </Layout>

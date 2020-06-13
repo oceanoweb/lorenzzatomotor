@@ -10,6 +10,7 @@ module.exports = {
     city: `S.B.Campo - SP`,
     author: `@marquinhusgonc`,
     siteUrl: `https://lorenzzatomotor.com.br`,
+    facebook: `https://www.facebook.com/LorenzzatoMotor/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -2,13 +2,18 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const InfoWrapped = styled.section`
-  max-width: 350px;
-  min-height: 350px;
+  /* max-width: 350px; */
+  /* min-width: 350px; */
+  min-height: 360px;
   padding: 4rem;
   border-radius: 5px 0 0 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  ${media.greaterThan("medium")`
+    min-width: 380px;
+  `}
 
   ${media.lessThan("medium")`
     padding: 1rem 2rem;
