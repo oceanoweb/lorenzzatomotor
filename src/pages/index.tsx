@@ -1,13 +1,13 @@
-import React from "react"
+import * as React from "react"
+import type { HeadFC, PageProps } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
-import { useStaticQuery, graphql } from "gatsby"
-
+import Form from "../components/Form"
+import Info from "../components/Info"
 import SEO from "../components/Seo"
 import Layout from "../components/Layout"
-import Info from "../components/Info"
-import Form from "../components/Form"
 
-const IndexPage = () => {
+const IndexPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,7 +23,6 @@ const IndexPage = () => {
       }
     }
   `)
-
   const {
     site: {
       siteMetadata: {
@@ -56,3 +55,5 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const Head: HeadFC = () => <title>Home Page</title>

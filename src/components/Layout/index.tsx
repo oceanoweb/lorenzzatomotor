@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import GlobalStyles from "../../styles/global"
 import * as S from "./styled"
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <S.LayoutMain>
       <GlobalStyles />

@@ -1,6 +1,10 @@
-require("dotenv").config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
-module.exports = {
+import type { GatsbyConfig } from "gatsby"
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Lorenzzato Motor`,
     description: `Revendedora de automóveis`,
@@ -12,19 +16,21 @@ module.exports = {
     siteUrl: `https://lorenzzatomotor.com.br`,
     facebook: `https://www.facebook.com/LorenzzatoMotor/`,
   },
+  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
+  // If you use VSCode you can also use the GraphQL plugin
+  // Learn more at: https://gatsby.dev/graphql-typegen
+  graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-material-ui`,
+    "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        trackingIds: ["GA-TRACKING_ID", "AW-CONVERSION_ID"],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -37,15 +43,17 @@ module.exports = {
         icon: `src/images/car-icon.png`, // This path is relative to the root of the site.
       },
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        name: "images",
+        path: "./src/images/",
       },
+      __key: "images",
     },
-    `gatsby-plugin-sitemap`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
   ],
 }
+
+export default config

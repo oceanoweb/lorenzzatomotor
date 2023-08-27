@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import media from "styled-media-query"
 
 export const LayoutMain = styled.main`
   background: var(--background);
@@ -14,7 +13,7 @@ export const LayoutWrapped = styled.section`
   display: flex;
   border-radius: 5px;
 
-  ${media.lessThan("medium")`
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
-  `}
+  }
 `

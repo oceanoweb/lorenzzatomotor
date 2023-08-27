@@ -17,6 +17,14 @@ const Info = ({
   comPhone,
   city,
   facebook,
+}: {
+  title: string
+  description?: string
+  email: string
+  mobilePhone: string
+  comPhone: string
+  city: string
+  facebook: string
 }) => (
   <S.InfoWrapped>
     <S.Title>{title}</S.Title>
