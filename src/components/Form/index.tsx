@@ -1,6 +1,6 @@
 import React from "react"
 
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import TextField from "@mui/material/TextField"
 
@@ -26,6 +26,7 @@ const Form = () => {
               name="full-name"
               label="Nome completo"
               color="success"
+              variant="standard"
             />
           </Grid>
         </Grid>
@@ -35,7 +36,14 @@ const Form = () => {
             <MailOutlineIcon />
           </Grid>
           <Grid item>
-            <TextField type="email" id="email" name="email" label="E-mail" color="success"/>
+            <TextField
+              type="email"
+              id="email"
+              name="email"
+              label="E-mail"
+              color="success"
+              variant="standard"
+            />
           </Grid>
         </Grid>
 
@@ -50,11 +58,17 @@ const Form = () => {
               name="message"
               label="Mensagem"
               color="success"
+              variant="standard"
             />
           </Grid>
         </Grid>
 
-        <Grid container spacing={1} alignItems="flex-end" justifyContent="flex-end">
+        <Grid
+          container
+          spacing={1}
+          alignItems="flex-end"
+          justifyContent="flex-end"
+        >
           <Button
             type="submit"
             variant="outlined"

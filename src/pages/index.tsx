@@ -1,7 +1,6 @@
 import * as React from "react"
 import { HeadFC, PageProps, graphql, useStaticQuery } from "gatsby"
 
-
 import Form from "../components/Form"
 import Info from "../components/Info"
 import SEO from "../components/Seo"
