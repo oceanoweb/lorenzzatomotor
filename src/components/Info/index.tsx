@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import WhatsAppIcon from "@material-ui/icons/WhatsApp"
-import FacebookIcon from "@material-ui/icons/Facebook"
-import MailOutlineIcon from "@material-ui/icons/MailOutline"
-import PhoneOutlinedIcon from "@material-ui/icons/PhoneOutlined"
-import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined"
+import WhatsAppIcon from "@mui/icons-material/WhatsApp"
+import FacebookIcon from "@mui/icons-material/Facebook"
+import MailOutlineIcon from "@mui/icons-material/MailOutline"
+import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined"
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined"
 
 import * as S from "./styled"
 

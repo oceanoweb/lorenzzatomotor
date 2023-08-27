@@ -1,13 +1,13 @@
 import React from "react"
 
-import Grid from "@material-ui/core/Grid"
-import Button from "@material-ui/core/Button"
-import TextField from "@material-ui/core/TextField"
+import Grid from '@mui/material/Grid';
+import Button from "@mui/material/Button"
+import TextField from "@mui/material/TextField"
 
-import MailOutlineIcon from "@material-ui/icons/MailOutline"
-import CreateOutlinedIcon from "@material-ui/icons/CreateOutlined"
-import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined"
-import PersonOutlineOutlinedIcon from "@material-ui/icons/PersonOutlineOutlined"
+import MailOutlineIcon from "@mui/icons-material/MailOutline"
+import CreateOutlinedIcon from "@mui/icons-material/CreateOutlined"
+import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined"
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined"
 
 import * as S from "./styled"
 
@@ -25,6 +25,7 @@ const Form = () => {
               id="full-name"
               name="full-name"
               label="Nome completo"
+              color="success"
             />
           </Grid>
         </Grid>
@@ -34,7 +35,7 @@ const Form = () => {
             <MailOutlineIcon />
           </Grid>
           <Grid item>
-            <TextField type="email" id="email" name="email" label="E-mail" />
+            <TextField type="email" id="email" name="email" label="E-mail" color="success"/>
           </Grid>
         </Grid>
 
@@ -48,16 +49,18 @@ const Form = () => {
               id="message"
               name="message"
               label="Mensagem"
+              color="success"
             />
           </Grid>
         </Grid>
 
-        <Grid container spacing={1} alignItems="flex-end" justify="center">
+        <Grid container spacing={1} alignItems="flex-end" justifyContent="flex-end">
           <Button
             type="submit"
             variant="outlined"
             size="large"
             endIcon={<ArrowForwardOutlinedIcon />}
+            color="inherit"
           >
             Enviar
           </Button>

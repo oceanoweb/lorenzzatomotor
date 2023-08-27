@@ -17,9 +17,10 @@
     "format": "npx prettier . --write"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "@material-ui/styles": "^4.11.5",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.6",
+    "@mui/material": "^5.14.6",
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.12.1",
     "gatsby-plugin-google-gtag": "^5.12.0",
