@@ -26,7 +26,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["GA-TRACKING_ID", "AW-CONVERSION_ID"],
+        trackingIds: [process.env.GOOGLE_ANALYTICS_ID],
       },
     },
     "gatsby-plugin-image",
