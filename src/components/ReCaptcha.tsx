@@ -19,3 +19,7 @@ export const useGoogleReCaptchaV3 = () => {
     [],
   )
 }
+
+// https://docs.getform.io/features/spam-filtering/recaptcha-v3/
+// https://www.google.com/recaptcha/admin/site/669877020/setup
+// https://codesandbox.io/s/typescript-google-re-captcha-v3-react-hooks-znj97?file=/src/hooks/useGoogleReCaptchaV3.ts:2262-2271
