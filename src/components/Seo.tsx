@@ -39,9 +39,14 @@ function SEO({
   const metaDescription = description || site.siteMetadata.description
   const url = site.siteMetadata.siteUrl
   const ogImage = `${url}${image || "/assets/img/cover.png"}`
+  const scriptAttributes = {
+    src: "https://www.google.com/recaptcha/api.js?render=6Lccg-0nAAAAAFmCdefGBIUPLaYk386nczhBhJD9",
+    type: "text/javascript",
+  }
 
   return (
     <Helmet
+      script={[scriptAttributes]}
       htmlAttributes={{
         lang,
       }}

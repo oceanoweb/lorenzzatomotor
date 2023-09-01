@@ -62,6 +62,11 @@ const Form = () => {
             />
           </Grid>
         </Grid>
+        <input
+          type="hidden"
+          id="captchaResponse"
+          name="g-recaptcha-response"
+        ></input>
 
         <Grid
           container

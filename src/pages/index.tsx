@@ -38,7 +38,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
       <Info
         title={title}
         description={description}
@@ -55,4 +54,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => (
+  <>
+    <SEO title="Home" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lccg-0nAAAAAFmCdefGBIUPLaYk386nczhBhJD9"></script>
+  </>
+)
