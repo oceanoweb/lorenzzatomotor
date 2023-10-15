@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import WhatsAppIcon from "@mui/icons-material/WhatsApp"
 import FacebookIcon from "@mui/icons-material/Facebook"
+import InstagramIcon from "@mui/icons-material/Instagram"
 import MailOutlineIcon from "@mui/icons-material/MailOutline"
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined"
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined"
@@ -17,6 +18,7 @@ const Info = ({
   comPhone,
   city,
   facebook,
+  instagram,
 }: {
   title: string
   description?: string
@@ -25,6 +27,7 @@ const Info = ({
   comPhone: string
   city: string
   facebook: string
+  instagram: string
 }) => (
   <S.InfoWrapped>
     <S.Title>{title}</S.Title>
@@ -61,7 +64,15 @@ const Info = ({
       <FacebookIcon />
       <S.Text>
         <S.Link href={`${facebook}`} target="_blank">
-          facebook.com/LorenzzatoMotor/
+          facebook.com/lorenzzatomotor/
+        </S.Link>
+      </S.Text>
+    </S.IconTextWrapper>
+    <S.IconTextWrapper>
+      <InstagramIcon />
+      <S.Text>
+        <S.Link href={`${instagram}`} target="_blank">
+          instagram.com/lorenzzatomotor/
         </S.Link>
       </S.Text>
     </S.IconTextWrapper>

@@ -18,6 +18,7 @@ const IndexPage: React.FC<PageProps> = () => {
           comPhone
           city
           facebook
+          instagram
         }
       }
     }
@@ -32,6 +33,7 @@ const IndexPage: React.FC<PageProps> = () => {
         comPhone,
         city,
         facebook,
+        instagram,
       },
     },
   } = data
@@ -47,6 +49,7 @@ const IndexPage: React.FC<PageProps> = () => {
         comPhone={comPhone}
         city={city}
         facebook={facebook}
+        instagram={instagram}
       />
       <Form />
     </Layout>
